@@ -1,0 +1,33 @@
+{
+  "name": "stphn.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d dist",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Stephen Sauceda <contact@stephensauceda.com> (https://stephensauceda.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-stephensauceda": "^1.1.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "firebase": "^3.4.1",
+    "lodash.times": "^4.3.2"
+  },
+  "babel": {
+    "presets": [
+      "stephensauceda"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^16.0.0",
+    "jest": "^16.0.1",
+    "nodemon": "^1.10.2"
+  }
+}
