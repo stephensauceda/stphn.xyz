@@ -20,10 +20,6 @@ export const app = express()
 
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-  res.send('It works...')
-})
-
 app.get('/receive', makeHash, (req, res) => {
   const name = req.query.name || req.hash
   database.ref(`links/${name}`).set({
