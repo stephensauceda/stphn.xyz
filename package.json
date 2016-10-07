@@ -6,9 +6,10 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage && codecov",
-    "dev": "nodemon --exec node -r babel-register -r dotenv/config src/index.js",
+    "dev": "./scripts/dev.sh",
     "build": "babel src -d dist",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "deploy": "./scripts/deploy.sh"
   },
   "keywords": [],
   "author": "Stephen Sauceda <contact@stephensauceda.com> (https://stephensauceda.com/)",
