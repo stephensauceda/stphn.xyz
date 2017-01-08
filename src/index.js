@@ -17,6 +17,15 @@ app.get('/receive', makeHash, (req, res) => {
   });
 })
 
+app.get('/stats', (req, res) => {
+  const linkRef = db.ref('links')
+
+  linkRef.once('value')
+    .then(snapshot => {
+      res.json(snapshot.val())
+    })
+})
+
 app.get('/:hash', (req, res) => {
   const linkRef = db.ref(`/links/${req.params.hash}`)
   linkRef
