@@ -18,10 +18,21 @@ app.get('/receive', makeHash, (req, res) => {
 })
 
 app.get('/:hash', (req, res) => {
-  db.ref(`/links/${req.params.hash}`)
+  const linkRef = db.ref(`/links/${req.params.hash}`)
+  linkRef
     .once('value')
     .then(snapshot => {
-      res.redirect(snapshot.val().url)
+      const val = snapshot.val()
+      if (val.views) {
+        linkRef.update({
+          views: val.views + 1
+        })
+      } else {
+        linkRef.update({
+          views: 1
+        })
+      }
+      res.redirect(val.url)
     })
 })
 
