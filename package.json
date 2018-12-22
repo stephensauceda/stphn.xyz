@@ -5,36 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:coverage": "jest --coverage && codecov",
-    "dev": "./scripts/dev.sh",
-    "build": "babel src -d dist",
-    "start": "node dist/index.js",
-    "deploy": "npm run build && now",
-    "stats": "node ./scripts/stats.js"
+    "test:coverage": "jest --coverage && codecov"
   },
   "keywords": [],
   "author": "Stephen Sauceda <contact@stephensauceda.com> (https://stephensauceda.com/)",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
     "firebase": "^3.4.1",
     "lodash.times": "^4.3.2"
   },
-  "babel": {
-    "presets": [
-      "stephensauceda"
-    ]
-  },
   "devDependencies": {
-    "axios": "^0.15.3",
-    "babel-cli": "^6.16.0",
-    "babel-jest": "^16.0.0",
-    "babel-preset-stephensauceda": "^1.1.1",
-    "babel-register": "^6.16.3",
+    "@stephensauceda/eslint-config": "^11.0.3",
     "codecov": "^1.0.1",
-    "dotenv": "^2.0.0",
-    "jest": "^16.0.1",
-    "nodemon": "^1.10.2"
+    "eslint": "^5.10.0",
+    "jest": "^23.6.0"
   }
 }
