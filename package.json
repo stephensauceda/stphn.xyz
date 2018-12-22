@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@stephensauceda/eslint-config": "^11.0.3",
-    "codecov": "^1.0.1",
     "eslint": "^5.10.0",
     "jest": "^23.6.0"
   }
