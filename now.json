@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "alias": "stphn.xyz",
+  "builds": [{ "src": "dist/index.js", "use": "@now/node-server" }],
+  "env": {
+    "stphn_apikey": "@stphn_apikey",
+    "stphn_authdomain": "@stphn_authdomain",
+    "stphn_databaseurl": "@stphn_databaseurl",
+    "stphn_storagebucket": "@stphn_storagebucket",
+    "stphn_messagingsenderid": "@stphn_messagingsenderid",
+    "NODE_ENV": "production"
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/dist/index.js" }
+  ]
+}
